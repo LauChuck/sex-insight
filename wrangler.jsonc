@@ -1,0 +1,27 @@
+/**
+ * For more details on how to configure Wrangler, refer to:
+ * https://developers.cloudflare.com/workers/wrangler/configuration/
+ */
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "sex-insight",
+	"main": "src/index.ts",
+	"compatibility_date": "2025-03-03",
+    "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "sex-insight",
+          "database_id": "5df76cb8-1bec-41dd-90b4-20153bdf6693"
+        }
+    ],
+    "secrets_store_secrets": [
+        {
+            "store_id": "123015c9a9ad43129275a7cb77b0d964",
+            "binding": "SECRET",
+            "secret_name": "sex-insight-secret"
+        }
+    ],
+	"observability": {
+		"enabled": true
+	}
+}
